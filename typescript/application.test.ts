@@ -1,7 +1,9 @@
-class PirateIsland {
-  location: string;
+type Location = "Jail" | "Town";
 
-  move(location: string= "Jail") {
+class PirateIsland {
+  location: Location;
+
+  move(location: Location = "Jail") {
     this.location = location;
   }
 }

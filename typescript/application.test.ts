@@ -1,4 +1,4 @@
-type Location = "Jail" | "Town";
+type Location = "Jail" | "Town" | "Bar";
 
 class PirateIsland {
   location: Location;
@@ -22,5 +22,13 @@ describe("Pirate island", () => {
 
     expect(pirateIsland.location).toEqual("Town");
   })
+
+  it.each([['Bar', "Town", "Jail"]]) ("should be able to move to the bar", (loaction: Location) => {
+    const pirateIsland = new PirateIsland()
+    pirateIsland.move(loaction);
+
+    expect(pirateIsland.location).toEqual(loaction);
+  })
+
 
 });

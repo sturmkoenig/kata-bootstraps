@@ -1,10 +1,11 @@
-describe("A Test", () => {
-  it("fails", () => {
-    expect(false as boolean).toEqual(true as boolean);
-  });
+function getInitialLocation() {
+  return "Jail"
+}
 
-    it("succeeds", () => {
-    expect(true as boolean).toEqual(true as boolean);
+describe("A Test", () => {
+  it("should be in the jail when starting out", () => {
+    const location = getInitialLocation();
+    expect(location).toEqual("Jail")
   });
 
 });
